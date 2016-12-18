@@ -29,7 +29,6 @@ export default class ComponentMain extends React.Component
      			*/
      			
      			that.setState({newsarr: arr});
-     			console.log("newsarr ");
 
      		},
      		error: function(err){
