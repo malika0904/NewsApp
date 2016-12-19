@@ -17,32 +17,25 @@ export default class FavNewsDisplay extends React.Component
 			dataType: 'JSON',
 
 			success: function(msg){
-				console.log("msg entry");
+				var arr = msg;
 
-				var iarr = msg;
-				for(var j= 0; j<iarr.length; j++)
-				{
-					console.log("i array "+ iarr[j].author);
-				}
-				console.log("msg exit");
-
-				that.setState({favarr : iarr});
+				that.setState({favarr : arr});	
 			},
 			error: function(err){
 				console.log("error occurred");
 			}
 
-		})
-		console.log("bbbyyyeee");
+		});
 	}
 
 	render(){
+		console.log("parent render");
 		return(
 			<div>
 				<h1>Your Favourite News are listed here</h1>
-				<h3>end fav news</h3>
 				<FavNewsChildIterate savedarr = {this.state.favarr} />
 			</div>
 		)
+		console.log("parent exit");
 	}
 }

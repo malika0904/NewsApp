@@ -9,7 +9,7 @@ router.post('/save', function(request, response, next){
 		title: request.body.title,
 		description: request.body.description,
 		url: request.body.url,
-		urltoImage: request.body.urltoImage,
+		urlToImage: request.body.urlToImage,
 		publishedAt: request.body.publishedAt,
 		comment: request.body.comment
 	});
@@ -41,7 +41,7 @@ router.get('/view', function(request, response){
 			response.send("Not able to find");
 		}
 		else{
-			response.send("Found  "+ data);
+			response.send(data);
 		}
 	});
 });
@@ -50,7 +50,6 @@ router.put('/update', function(request, response){
 	newstitle= request.body.title;
 	newcomment= request.body.comment;
 	saveschema.update({'title':newstitle},{$set:{'comment':newcomment}});
-	response.send("data updated"+ newcomment+",,,"+newstitle);
 
 
 	

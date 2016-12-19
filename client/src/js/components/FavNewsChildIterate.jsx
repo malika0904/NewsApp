@@ -1,5 +1,5 @@
 import React from 'react';
-import ViewFavNews from './ViewFavNews.jsx';
+import ViewFavNewsGC from './ViewFavNewsGC';
 
 export default class FavNewsChildIterate extends React.Component
 {
@@ -10,16 +10,17 @@ export default class FavNewsChildIterate extends React.Component
 
 	render()
 	{
-	console.log("entry itertae ");
+	console.log("entry child ");
 		return(
 			<div>
 				{
-					this.props.savedarr.map(function(item){
-						return(<ViewFavNews favnewsarr= {item} />)
-				})
+					this.props.savedarr.map(function(i){
+						return(<ViewFavNewsGC favnewsarr = {i} />)
+					})
 				}
 			</div>
 		)
+		console.log("child bye");
 	}
 
 }

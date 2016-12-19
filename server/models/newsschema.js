@@ -6,7 +6,7 @@ var saveschemas = new schema({
 	title: String,
 	description: String,
 	url: String,
-	urltoImage: String,
+	urlToImage: String,
 	publishedAt: String,
 	comment: String
 });

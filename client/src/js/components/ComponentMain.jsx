@@ -39,7 +39,6 @@ export default class ComponentMain extends React.Component
 	
 	render()
 	{
-		console.log(this.state.newsarr);
 		return(
 				<div id="main">
 					<SearchComponent searchProvider={this.fetchNewsFromApi}/>
