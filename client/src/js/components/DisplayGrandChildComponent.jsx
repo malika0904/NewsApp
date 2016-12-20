@@ -10,7 +10,7 @@ export default class DisplayGrandChildComponent extends React.Component
 	}
 
 	savehandler(){
-		console.log('inside saveHandler')
+		alert("saved successfully");
 		$.ajax({
 
 			url:"http://localhost:8080/news_details/save",
@@ -39,8 +39,6 @@ export default class DisplayGrandChildComponent extends React.Component
 					Published By:{this.props.newsobject.author}
 					{this.props.newsobject.description}
 					</p>
-					<textarea rows="3" cols="30" placeholder="Your Comment">
-					</textarea>
                     <button type="button" onClick = {this.savehandler}>Save</button>
 					
 				</div>

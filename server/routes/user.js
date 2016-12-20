@@ -15,9 +15,10 @@ router.post('/register', function(request, response, next){
 			response.send("Error occurred");
 		}
 		else{
-			response.send("data is saved");
+			response.send("registration done");
 		}
 	});
 });
+
 
 module.exports = router;

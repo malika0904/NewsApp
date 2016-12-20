@@ -47,11 +47,10 @@ router.get('/view', function(request, response){
 });
 
 router.put('/update', function(request, response){
-	newstitle= request.body.title;
-	newcomment= request.body.comment;
-	saveschema.update({'title':newstitle},{$set:{'comment':newcomment}});
-
-
+	newstitle = request.body.title;
+	newcomment = request.body.comment;
+	saveschema.update({'title': newstitle},{$set:{'comment': newcomment}});
+	response.send("updated"+newstitle+"hjhhj"+newcomment);
 	
 });
 

@@ -12,7 +12,8 @@ import NavBar from './components/NavBar.jsx';
 import FavNewsDisplay from './components/FavNewsDisplay.jsx';
 import ComponentMain from './components/ComponentMain.jsx';
 import SearchComponent from './components/SearchComponent.jsx';
-
+import Register from './components/Register.jsx';
+import Login from './components/Login.jsx';
 
 class MainComponent extends React.Component{
 
@@ -32,9 +33,11 @@ ReactDOM.render(
              <Route path="/" component={MainComponent} >
              	<IndexRoute component ={ComponentMain}/>
              	<Route path="/favnews" component={FavNewsDisplay} />
-             	<Route path="/home" component={ComponentMain}/>
+             	<Route path="/main" component={ComponentMain}/>
              	<Route path="/about" component={About}/>
              	<Route path="/contact" component={Contact}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/register" component={Register}/>
              </Route>
 
 
